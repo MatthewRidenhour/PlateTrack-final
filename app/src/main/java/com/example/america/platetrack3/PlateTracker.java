@@ -115,7 +115,7 @@ public class PlateTracker extends AsyncTask<Void, Void, String> {
 
             ((MainActivity) context).showRouteList();
 
-            context.startActivity(new Intent(context, MapsActivity.class));
+            //context.startActivity(new Intent(context, MapsActivity.class));
         }
     }
 }
