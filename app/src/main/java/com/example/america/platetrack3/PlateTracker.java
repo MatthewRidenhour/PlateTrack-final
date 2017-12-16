@@ -15,9 +15,9 @@ import java.util.ArrayList;
  */
 
 public class PlateTracker extends AsyncTask<Void, Void, String> {
-    static final String url = "jdbc:mysql://146.148.106.136/plateData";
-    static final String user = "platem8";
-    static final String pass = "PtDbP4S5";
+    static final String url = "jdbc:mysql://35.225.1.104/PlateTrack3";
+    static final String user = "main";
+    static final String pass = "platePass1";
 
 
     ProgressDialog mProgressDialog;
@@ -51,7 +51,7 @@ public class PlateTracker extends AsyncTask<Void, Void, String> {
 //                st.executeUpdate("DELETE FROM PlateTrackDB.user_plate WHERE user_id = " + userId + " AND plate_number = '" + this.plate + "';");
 //            }
 
-            java.sql.ResultSet rs = st.executeQuery("SELECT date, time, latitude, longitude FROM plateData.plateTrack WHERE plate = '" + this.plate +
+            java.sql.ResultSet rs = st.executeQuery("SELECT date, time, latitude, longitude FROM PlateTrack3.plateTrack WHERE plate = '" + this.plate +
                     "' AND date BETWEEN STR_TO_DATE('" + start + "', '%m/%d/%Y') AND STR_TO_DATE('" + end + "', '%m/%d/%Y')" +
                     " ORDER BY time;");
 
